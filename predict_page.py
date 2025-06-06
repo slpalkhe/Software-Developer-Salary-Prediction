@@ -60,6 +60,7 @@ def show_predict_page():
         X[:, 0] = le_country.transform(X[:,0])
         X[:, 1] = le_education.transform(X[:,1])
         X = X.astype(float)
+        
 
         salary = regressor.predict(X)  #Salary is anumpy array with only one value
         st.subheader(f"The estimated salary is ${salary[0]:.2f}")
