@@ -34,8 +34,9 @@ import os
 
 @st.cache_resource
 def load_data():
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    file_path = os.path.join(dir_path, "survey_results_public.csv")
+    # Use absolute file path to avoid FileNotFoundError in deployment
+    file_path = "C:/Users/shubh/OneDrive/Documents/project/ML-Software-Salary-Prediction-main/survey_results_public.csv"
+    print("Using absolute CSV file path:", file_path)
     df = pd.read_csv(file_path)
     df = df[["Country", "EdLevel", "YearsCodePro", "Employment", "ConvertedCompYearly"]]
     df = df[df["ConvertedCompYearly"].notnull()]
