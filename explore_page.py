@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
-
 def shorten_categories(categories, cutoff):
     categorical_map = {}
     for i in range(len(categories)):
@@ -31,6 +29,8 @@ def clean_education(x):
     return 'Less than a Bachelors'
 
 #we're gonna cache the loading data so it does not repeat each time
+
+import os
 
 @st.cache_resource
 def load_data():
