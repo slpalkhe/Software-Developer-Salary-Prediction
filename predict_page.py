@@ -5,8 +5,7 @@ import os
 
 
 def load_model():
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    file_path = os.path.join(dir_path, 'saved_steps.pkl')
+    file_path = 'ML-Software-Salary-Prediction-main/saved_steps.pkl'
     with open(file_path, 'rb') as file:
         data = pickle.load(file)
     return data
