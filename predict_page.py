@@ -8,7 +8,6 @@ def load_model():
     file_path = 'ML-Software-Salary-Prediction-main/saved_steps.pkl'
     with open(file_path, 'rb') as file:
         data = pickle.load(file)
-    return data
 
 data = load_model()
 
